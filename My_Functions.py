@@ -3,7 +3,7 @@ Pones todas tus funciones aquí, las importas a tu jupyter notebook y las llamas
 
 
 def replace_str_values(df, column_name, original_value, new_value):
-    #Best practice is to add a comment inside the function to explain what it does, so anyone knows what to expect. And it is always best to use clear names of variables, instead of x,y 
+    #Best practice is to add a comment inside the function to explain what it does, so anyone knows what to expect.     And it is always best to use clear names of variables, instead of x,y 
     '''
     This function updates a value contained inside a column of a daframe:
     Input:
@@ -31,3 +31,27 @@ def rename_col(df, column_name, new_column_name):
     
     '''
     return df.rename(columns = {column_name:new_column_name}, inplace = True) 
+
+
+## THIRD FUNCTION
+
+def round2(x):
+    '''
+    This function rounds a whole column by 2 decimals
+    Input:
+        x: a column
+    Output:
+        A column rounded by 2 decimals
+    '''
+    return round(x,2)
+
+
+## FOURTH FUNCTION
+
+def cleangender(x):
+    if x in ['M', 'MALE']:
+        return 'Male'
+    elif x.startswith('F'):
+        return 'Female'
+    else:
+        return 'U'
